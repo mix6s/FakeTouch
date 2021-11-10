@@ -24,6 +24,8 @@
 
 - (void)setIsTap:(BOOL)isTap;
 
+- (void)_setIsTapToClick:(BOOL)tapToClick;
+
 - (void)setTimestamp:(NSTimeInterval)timestamp;
 
 - (void)_setHidEvent:(IOHIDEventRef)event;
