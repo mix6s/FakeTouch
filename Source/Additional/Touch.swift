@@ -82,6 +82,14 @@ extension UITouch.Phase {
             return "cancelled"
         case .stationary:
             return "stationary"
+        case .regionEntered:
+            return "stationary"
+        case .regionMoved:
+            return "stationary"
+        case .regionExited:
+            return "stationary"
+        @unknown default:
+            return "stationary"
         }
     }
     
