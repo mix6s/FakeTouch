@@ -25,8 +25,11 @@ extension UITouch {
         setView(view)
         setTapCount(1)
         setPhase(.began)
-        _setIsFirstTouch(forView: true)
-        setIsTap(true)
+        if responds(to: #selector(self._setIsFirstTouch(forView:))) {
+            _setIsFirstTouch(forView: true)
+        } else {
+            _setIsTap(toClick: true)
+        }
         
         _setLocation(inWindow: location, resetPrevious: true)
         setTimestamp(ProcessInfo.processInfo.systemUptime)
